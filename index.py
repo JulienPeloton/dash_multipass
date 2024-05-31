@@ -33,7 +33,13 @@ from routes import api_bp
 def log_button(title, icon, color, href):
     """Template button for login/logout"""
     out = dmc.Anchor(
-        dmc.Button(title, id="log-icon", leftIcon=DashIconify(icon=icon), color=color),
+        dmc.Button(
+            title,
+            id="log-icon",
+            leftIcon=DashIconify(icon=icon, width=20),
+            color=color,
+            radius="sm"
+        ),
         href=href,
         variant="text",
         style={
@@ -122,7 +128,14 @@ app.layout = dmc.MantineProvider(
                             id="button",
                         ),
                         dmc.Space(w="xl"),
-                        dmc.Button("Test connection status", id="obj1", n_clicks=0),
+                        dmc.Button(
+                            "Test connection status",
+                            variant="gradient",
+                            gradient={"from": "grape", "to": "pink", "deg": 35},
+                            radius="xl",
+                            id="obj1",
+                            n_clicks=0
+                        ),
                     ],
                     style={"height": 200, "width": "100%"},
                 ),
