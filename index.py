@@ -38,7 +38,7 @@ def log_button(title, icon, color, href):
             id="log-icon",
             leftIcon=DashIconify(icon=icon, width=20),
             color=color,
-            radius="sm"
+            radius="sm",
         ),
         href=href,
         variant="text",
@@ -134,7 +134,7 @@ app.layout = dmc.MantineProvider(
                             gradient={"from": "grape", "to": "pink", "deg": 35},
                             radius="xl",
                             id="obj1",
-                            n_clicks=0
+                            n_clicks=0,
                         ),
                     ],
                     style={"height": 200, "width": "100%"},
